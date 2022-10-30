@@ -1,0 +1,23 @@
+{
+  "name": "hello-express",
+  "version": "1.0.0",
+  "description": "Hello world for node + express",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mehdi-Bayar/hello-express.git"
+  },
+  "author": "Mehdi Bayar",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Mehdi-Bayar/hello-express/issues"
+  },
+  "homepage": "https://github.com/Mehdi-Bayar/hello-express#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
