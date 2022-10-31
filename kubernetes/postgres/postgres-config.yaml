@@ -1,0 +1,13 @@
+
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: postgres-config
+  namespace: hello-express
+  labels:
+    app: postgres
+data:
+  POSTGRES_DB: hello-express
+  POSTGRES_USER: admin
+  POSTGRES_PASSWORD: psltest
+
