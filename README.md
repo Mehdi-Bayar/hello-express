@@ -17,7 +17,7 @@ Hello world for node + express
 ### Applying the kubernetes config
 Creating the kubernetes namspace (hello-express) that we will use for our application 
 
-```kubectl apply -f kubernetes/01/hello-express-ns.yaml```
+```kubectl apply -f kubernetes/01-hello-express-ns.yaml```
 
 Next apply the full kubernetes remaining configuration 
 ```kubectl apply -f kubernetes```
