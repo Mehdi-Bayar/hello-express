@@ -17,4 +17,4 @@ RUN npm install
 COPY . .
 
 EXPOSE 8080
-CMD [ "node", "-r esm index.js" ]
+CMD npm start
