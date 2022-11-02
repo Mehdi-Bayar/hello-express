@@ -1,6 +1,17 @@
 # hello-express
 Hello world for node + express
 
+## Running the application on local
+
+### Install the dependencies
+```npm install```
+
+### Start the application
+```npm start```
+
+### Test the application
+```curl -i localhost:8080```
+
 ## Dockerization of the hello world express app
 
 ### Creating an docker image for the application
