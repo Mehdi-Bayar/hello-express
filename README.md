@@ -16,7 +16,7 @@ You can run this application on local or inside docker or in kubernetes
 
 ## For Docker
 
-### Create an docker image for the application
+### Create a docker image for the application
 ```docker build . -t bayar/hello-express```
 
 ### Run the docker image
