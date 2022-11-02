@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
       - name: hello-express
-        image: bayar/hello-express:main
+        image: bayar/hello-express:pr-8
         ports:
         - name: http
           containerPort: 8080
