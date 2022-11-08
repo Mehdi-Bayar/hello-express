@@ -14,28 +14,13 @@ export const getSequelize = () => {
     sequelizeInstance = new Sequelize({
         dialect: 'postgres',
         database: 'hello-express',
-        host: '192.168.0.64',
-        username: 'admin',
-        password: 'psltest',
         port: 5432,
-        // replication: {
-        //     read: [
-        //         {
-        //             host: '192.168.0.64',
-        //             username: 'admin',
-        //             password: 'psltest',
-        //             port: 5432,
-        //         },
-        //     ],
-        //     write: [
-        //       {
-        //           host: '192.168.0.64',
-        //           username: 'admin',
-        //           password: 'psltest',
-        //           port: 5432,
-        //       },
-        //   ],
-        // },
+        replication: {
+            read: [
+                { host: '192.168.0.64', username: 'admin', password: 'psltest' },
+            ],
+            write: { host: '192.168.0.64', username: 'admin', password: 'psltest' }
+        },
         retry: {
             max: 3,
             timeout: 1000,
