@@ -14,7 +14,14 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    
+
+    - name: 'Create env file'
+      run: |
+        pwd
+        touch .env
+        echo "${{ secrets.HELLO_EXPRESS_ENV }}" >> .env
+        cat .env
+
     - name: Log in to Docker Hub
       uses: docker/login-action@v2.1.0
       with:

@@ -1,5 +1,7 @@
 import { Sequelize } from 'sequelize';
+import * as dotenv from 'dotenv';
 
+dotenv.config();
 let sequelizeInstance;
 
 export const getSequelize = () => {
@@ -18,15 +20,15 @@ export const getSequelize = () => {
     replication: {
       read: [
         {
-          host: '192.168.0.132',
-          username: 'postgres',
-          password: 'postgresSuperUserPsw',
+          host: process.env.DB_READ_HOST,
+          username: process.env.DB_USER,
+          password: process.env.DB_PASSWORD,
         },
       ],
       write: {
-        host: '192.168.0.131',
-        username: 'postgres',
-        password: 'postgresSuperUserPsw',
+        host: process.env.DB_WRITE_HOST,
+        username: process.env.DB_USER,
+        password: process.env.DB_PASSWORD,
       },
     },
     retry: {
