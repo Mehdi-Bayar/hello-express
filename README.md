@@ -9,7 +9,11 @@ Also checkout the other branches. There's some small example applications that c
 ```docker build . -t bayar/hello-express```
 
 ### Running the docker image
+### Running the image with the default configuration
 ```docker run -p 49160:8080 -d bayar/hello-express```
+
+#### If you like to add environment variable . you can update the .env file and your run the docker image with
+```docker run -p 49160:8080 --env-file .env -d bayar/hello-express```
 
 ### Testing the docker image
 ```curl -i localhost:49160```
