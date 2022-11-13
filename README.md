@@ -1,6 +1,8 @@
 # hello-express
 Hello world for node + express
 
+Also checkout the other branches. There's some small example applications that connects to the database
+
 ## Dockerization of the hello world express app
 
 ### Creating an docker image for the application
@@ -40,3 +42,13 @@ Retrieve the external-ip address then you can test the app using the curl comman
 
 ```curl -i 192.168.0.63:8080```
  
+
+## Running the application in local
+### Copy and update the .env file as needed
+```cp .env.dist .env```
+
+### Run the node application
+```npm start```
+
+### Test the application
+```curl -i 0.0.0.0:8080```
