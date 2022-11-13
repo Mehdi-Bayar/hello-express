@@ -1,8 +1,10 @@
-const express = require('express');
+import express from 'express';
+import * as dotenv from 'dotenv';
+dotenv.config();
 
 // Constants
-const PORT = 8080;
-const HOST = '0.0.0.0';
+const PORT = process.env.PORT;
+const HOST = process.env.HOST;
 
 // App
 const app = express();
