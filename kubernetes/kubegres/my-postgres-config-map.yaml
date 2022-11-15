@@ -17,10 +17,11 @@ data:
 
     customDatabaseName="hello-express"
     customUserName="hello-express"
+    POSTGRES_USER=postgres
 
     echo "$dt - Running: psql -v ON_ERROR_STOP=1 --username $POSTGRES_USER --dbname $POSTGRES_DB ...";
 
-    psql -v ON_ERROR_STOP=1 --username "$POSTGRES_USER" --dbname "$POSTGRES_DB" <<-EOSQL
+    PGPASSWORD=$POSTGRES_PASSWORD psql -v ON_ERROR_STOP=1 --username "$POSTGRES_USER" --dbname "$POSTGRES_DB" <<-EOSQL
     CREATE DATABASE $customDatabaseName;
     CREATE USER $customUserName WITH PASSWORD '$POSTGRES_MY_DB_PASSWORD';
     GRANT ALL PRIVILEGES ON DATABASE "$customDatabaseName" to $customUserName;
