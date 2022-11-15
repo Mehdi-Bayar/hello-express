@@ -6,7 +6,7 @@ metadata:
 
 spec:
 
-   replicas: 2
+   replicas: 3
    image: postgres:14.1
 
    database:

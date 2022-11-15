@@ -1,11 +1,10 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: mypostgres-conf
-  namespace: default
+  name: postgres-conf
+  namespace: hello-express
 
 data:
-
   primary_init_script.sh: |
     #!/bin/bash
     set -e
