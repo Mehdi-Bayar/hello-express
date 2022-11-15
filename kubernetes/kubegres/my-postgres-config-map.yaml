@@ -21,10 +21,10 @@ data:
 
     echo "$dt - Running: psql -v ON_ERROR_STOP=1 --username $POSTGRES_USER --dbname $POSTGRES_DB ...";
 
-    PGPASSWORD=$POSTGRES_PASSWORD psql -v ON_ERROR_STOP=1 --username "$POSTGRES_USER" --dbname "$POSTGRES_DB" <<-EOSQL
-    CREATE DATABASE $customDatabaseName;
-    CREATE USER $customUserName WITH PASSWORD '$POSTGRES_MY_DB_PASSWORD';
-    GRANT ALL PRIVILEGES ON DATABASE "$customDatabaseName" to $customUserName;
-    EOSQL
+    PGPASSWORD=$POSTGRES_PASSWORD psql -v ON_ERROR_STOP=1 --username "$POSTGRES_USER" --dbname "$POSTGRES_DB" <<SQL
+    CREATE DATABASE "$customDatabaseName";
+    CREATE USER "$customUserName" WITH PASSWORD '$POSTGRES_MY_DB_PASSWORD';
+    GRANT ALL PRIVILEGES ON DATABASE "$customDatabaseName" to "$customUserName";
+    SQL
 
     echo "$dt - Init script is completed";
