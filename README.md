@@ -56,3 +56,10 @@ Retrieve the external-ip address then you can test the app using the curl comman
 
 ### Test the application
 ```curl -i 0.0.0.0:8080```
+## For hello-postgres-replication 
+See https://www.kubegres.io/doc/getting-started.html
+
+the document says that it will automatically create 2 services one for the primary database and a 2nd one for the replication but it did not actually
+I've created the services by copying the configuration from this link :
+
+https://github.com/reactive-tech/kubegres/tree/main/controllers/spec/template/yaml
