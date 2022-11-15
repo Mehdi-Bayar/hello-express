@@ -5,7 +5,7 @@ metadata:
   labels:
     app: hello-express
 spec:
-  storageClassName: manual
+  storageClassName: microk8s-hostpath
   accessModes:
     - ReadWriteMany
   resources:

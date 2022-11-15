@@ -6,7 +6,7 @@ metadata:
     type: local
     app: hello-express
 spec:
-  storageClassName: manual
+  storageClassName: microk8s-hostpath
   capacity:
     storage: 1Gi
   accessModes:
